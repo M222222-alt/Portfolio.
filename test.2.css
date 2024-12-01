@@ -1,0 +1,269 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:where([hidden]:not([hidden='until-found'])) {
+	display: none !important;
+}
+
+:where(html) {
+	-webkit-text-size-adjust: none;
+	color-scheme: dark light;
+	tab-size: 2;
+	scrollbar-gutter: stable;
+}
+
+:where(html:has(dialog:modal[open])) {
+	overflow: clip;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	:where(html:focus-within) {
+		scroll-behavior: smooth;
+	}
+}
+
+:where(body) {
+	line-height: 1.5;
+	font-family: system-ui, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+:where(button) {
+	all: unset;
+}
+
+:where(input, button, textarea, select) {
+	font: inherit;
+	color: inherit;
+}
+
+:where(textarea) {
+	resize: vertical;
+	resize: block;
+}
+
+:where(button, label, select, summary, [role='button'], [role='option']) {
+	cursor: pointer;
+}
+
+:where(:disabled) {
+	cursor: not-allowed;
+}
+
+:where(label:has(> input:disabled), label:has(+ input:disabled)) {
+	cursor: not-allowed;
+}
+
+:where(a) {
+	color: inherit;
+	text-underline-offset: 0.2ex;
+}
+
+:where(ul, ol) {
+	list-style: none;
+}
+
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+	display: block;
+}
+
+:where(img, picture, svg, video) {
+	max-inline-size: 100%;
+	block-size: auto;
+}
+
+:where(p, h1, h2, h3, h4, h5, h6) {
+	overflow-wrap: break-word;
+}
+
+:where(h1, h2, h3) {
+	line-height: calc(1em + 0.5rem);
+	text-wrap: balance;
+}
+
+:where(hr) {
+	border: none;
+	border-block-start: 1px solid;
+	color: inherit;
+	block-size: 0;
+	overflow: visible;
+}
+
+:where(dialog, [popover]) {
+	border: none;
+	background: none;
+	color: inherit;
+	inset: unset;
+	max-width: unset;
+	max-height: unset;
+}
+
+:where(dialog:not([open], [popover]), [popover]:not(:popover-open)) {
+	display: none !important;
+}
+
+:where(:focus-visible) {
+	outline: 3px solid CanvasText;
+	box-shadow: 0 0 0 5px Canvas;
+	outline-offset: 1px;
+}
+
+:where(:focus-visible, :target) {
+	scroll-margin-block: 8vh;
+}
+
+:where(.visually-hidden:not(:focus-within, :active)) {
+	clip-path: inset(50%) !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden !important;
+	position: absolute !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+	user-select: none !important;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+}
+
+.inner {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+
+header {
+    height: 100px;
+}
+
+header h1 img {
+    width: 280px;
+}
+
+header h1 {
+    position: absolute;
+    top: 7px;
+}
+
+header ul {
+    display: inline-block;
+    list-style: none;
+    padding: 20px 0;
+}
+
+header ul li:first-child {
+    margin-right: 20px;
+}
+
+header ul li {
+    display: inline-block;
+    line-height: 1.3;
+    color:  #6c757d;;
+    text-align: left;
+    vertical-align: middle;
+}
+
+header ul li h2 {
+    font-size: 13px; 
+    font-weight: normal;
+}
+
+header ul li p {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+header ul li a {
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    background-color: #6c757d;
+    text-decoration: none;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 15px;
+    border-radius: 5px;
+}
+
+header ul li a:hover {
+    background-color: #5a6268;
+}
+
+nav {
+    background-color: #343A40;
+    text-align: center;
+}
+
+nav ul {
+    width: 1100px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: inline-block;
+    height: 55px;
+    line-height: 55px;
+    color: rgba(255, 255, 255, .5);
+    text-decoration: none;
+    padding: 0 35px;
+}
+
+nav ul li a:hover{
+    color: rgba(255, 255, 255, .75);
+}
+
+.key_visual {
+    text-align: right;
+    height: 600px;
+    background-image: url(../html/img/top-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.key_visual_content {
+    display: inline-block;
+    width: 560px;
+    height: 300px;
+    padding: 30px 15px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: left;
+    margin-top: 60px;
+
+}
+
+.key_visual_content h2 {
+    margin-bottom: 15px;
+    font-size: 55px;
+    font-weight: 300;
+}
+
+.key_visual_content p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    padding-bottom: 35px;
+}
+
+p.notice {
+    font-size: 15px;
+    margin: 0;
+}
+
+
+
+
